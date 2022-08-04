@@ -1,4 +1,13 @@
-<title>aaaa</title>
+
+
+
+
+
+
+
+
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5d7bfce9066384f13eae385f24734c90&libraries=services"></script>
+
 <style>
  html, body {width:100%;height:100%;margin:0;padding:0;overflow: hidden} 
 .map_wrap {position:relative;overflow:hidden;width:100%;height:350px;}
@@ -546,21 +555,21 @@ function navi2(m_name, p_m_y, p_m_x) {
 // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
 var positions = [
 {         content: '<div class="showlistbox"><a id=navi href=javascript:navi2("1.소화전",33.497246672,126.545214401);>'.concat(Navi_Imgsrc,'</a><b>1.소화전</b><br>제주시 남광로 99<br>직장, 정원수: 212</div>'), latlng: new daum.maps.LatLng(33.497246672,126.545214401), markerImage: new daum.maps.MarkerImage('http://ajubang.com/map/user/firehydrant.png', imageSize, imageOption),title1:"소화전"},
-{         content: '<div class="showlistbox"><a id=navi href=javascript:navi2("2.띠앗어린이집",33.491473034,126.548201149);>'.concat(Navi_Imgsrc,'</a><b>2.띠앗어린이집</b><br>제주특별자치도 제주시 간월동로5길 10 (아라이동)<br>가정, 정원수: 20</div>'), latlng: new daum.maps.LatLng(33.491473034,126.548201149), markerImage: new daum.maps.MarkerImage('http://t1.daumcdn.net/localimg/localimages/07/2018/pc/img/marker_spot.pngmark.png', imageSize, imageOption),title1:"띠앗어린이집"},
+{         content: '<div class="showlistbox"><a id=navi href=javascript:navi2("2.띠앗어린이집",33.491473034,126.548201149);>'.concat(Navi_Imgsrc,'</a><b>2.띠앗어린이집</b><br>제주특별자치도 제주시 간월동로5길 10 (아라이동)<br>가정, 정원수: 20</div>'), latlng: new daum.maps.LatLng(33.491473034,126.548201149), markerImage: new daum.maps.MarkerImage('mark.png', imageSize, imageOption),title1:"띠앗어린이집"},
 {         content: '<div class="showlistbox"><a id=navi href=javascript:navi2("3.보현어린이집",33.490086353,126.548591246);>'.concat(Navi_Imgsrc,'</a><b>3.보현어린이집</b><br>제주특별자치도 제주시 간월동로5길 42 (아라이동)<br>민간, 정원수: 39</div>'), latlng: new daum.maps.LatLng(33.490086353,126.548591246), markerImage: new daum.maps.MarkerImage('http://ajubang.com/map/user/rmark3.png', imageSize, imageOption),title1:"보현어린이집"},
 {         content: '<div class="showlistbox"><a id=navi href=javascript:navi2("4.튼튼어린이집",33.489134920,126.548207066);>'.concat(Navi_Imgsrc,'</a><b>4.튼튼어린이집</b><br>제주특별자치도 제주시 간월동로5길 57-3 (아라동)<br>민간, 정원수: 64</div>'), latlng: new daum.maps.LatLng(33.489134920,126.548207066), markerImage: new daum.maps.MarkerImage('http://ajubang.com/map/user/rmark4.png', imageSize, imageOption),title1:"튼튼어린이집"},
 {         content: '<div class="showlistbox"><a id=navi href=javascript:navi2("5.크린하우스",33.4990037872463,126.544984920541);>'.concat(Navi_Imgsrc,'</a><b>5.크린하우스</b><br>제주특별자치도 제주시 이도이동 443<br>민간, 정원수: 39</div>'), latlng: new daum.maps.LatLng(33.4990037872463,126.544984920541), markerImage: new daum.maps.MarkerImage('http://ajubang.com/map/user/recycle.png', imageSize, imageOption),title1:"크린하우스"},
 {         content: '<div class="showlistbox"><a id=navi href=javascript:navi2("6.요요어린이집",33.508522870,126.561604021);>'.concat(Navi_Imgsrc,'</a><b>6.요요어린이집</b><br>제주특별자치도 제주시 거로남4길 11-6 (화북동)<br>민간, 정원수: 39</div>'), latlng: new daum.maps.LatLng(33.508522870,126.561604021), markerImage: new daum.maps.MarkerImage('http://ajubang.com/map/user/gmark6.png', imageSize, imageOption),title1:"요요어린이집"},
 {         content: '<div class="showlistbox"><a id=navi href=javascript:navi2("7.동그라미어린이집",33.507989980,126.561529800);>'.concat(Navi_Imgsrc,'</a><b>7.동그라미어린이집</b><br>제주특별자치도 제주시 거로남4길 21 (화북이동)<br>민간, 정원수: 198</div>'), latlng: new daum.maps.LatLng(33.507989980,126.561529800), markerImage: new daum.maps.MarkerImage('http://ajubang.com/map/user/gmark7.png', imageSize, imageOption),title1:"동그라미어린이집"},
-{         content: '<div class="showlistbox"><a id=navi href=javascript:navi2("8.마야어린이집",33.507898332,126.564760410);>'.concat(Navi_Imgsrc,'</a><b>8.마야어린이집</b><br>제주특별자치도 제주시 거로남6길 48 (화북이동)<br>민간, 정원수: 39</div>'), latlng: new daum.maps.LatLng(33.507898332,126.564760410), markerImage: new daum.maps.MarkerImage('http://t1.daumcdn.net/localimg/localimages/07/2018/pc/img/marker_spot.pngmark.png', imageSize, imageOption),title1:"마야어린이집"},
+{         content: '<div class="showlistbox"><a id=navi href=javascript:navi2("8.마야어린이집",33.507898332,126.564760410);>'.concat(Navi_Imgsrc,'</a><b>8.마야어린이집</b><br>제주특별자치도 제주시 거로남6길 48 (화북이동)<br>민간, 정원수: 39</div>'), latlng: new daum.maps.LatLng(33.507898332,126.564760410), markerImage: new daum.maps.MarkerImage('mark.png', imageSize, imageOption),title1:"마야어린이집"},
 {         content: '<div class="showlistbox"><a id=navi href=javascript:navi2("9.프라임국제어린이집",33.518119873,126.579342792);>'.concat(Navi_Imgsrc,'</a><b>9.프라임국제어린이집</b><br>제주특별자치도 제주시 건주로2길 27-8 (삼양이동)<br>복지법인, 정원수: 58</div>'), latlng: new daum.maps.LatLng(33.518119873,126.579342792), markerImage: new daum.maps.MarkerImage('http://ajubang.com/map/user/pmark9.png', imageSize, imageOption),title1:"프라임국제어린이집"},
-{         content: '<div class="showlistbox"><a id=navi href=javascript:navi2("10.아이꿈별어린이집",33.515393248,126.579817378);>'.concat(Navi_Imgsrc,'</a><b>10.아이꿈별어린이집</b><br>제주특별자치도 제주시 건주로6길 15-3<br>민간, 정원수: 210</div>'), latlng: new daum.maps.LatLng(33.515393248,126.579817378), markerImage: new daum.maps.MarkerImage('http://t1.daumcdn.net/localimg/localimages/07/2018/pc/img/marker_spot.pngmark.png', imageSize, imageOption),title1:"아이꿈별어린이집"},
-{         content: '<div class="showlistbox"><a id=navi href=javascript:navi2("11.CCTV",33.513228320,126.582713258);>'.concat(Navi_Imgsrc,'</a><b>11.CCTV</b><br>제주특별자치도 제주시 건주로7길 24-7 1층(도련일동)<br>가정, 정원수: 20</div>'), latlng: new daum.maps.LatLng(33.513228320,126.582713258), markerImage: new daum.maps.MarkerImage('http://t1.daumcdn.net/localimg/localimages/07/2018/pc/img/marker_spot.png', imageSize, imageOption),title1:"CCTV"},
-{         content: '<div class="showlistbox"><a id=navi href=javascript:navi2("12.한라어린이집",33.509406805,126.541789259);>'.concat(Navi_Imgsrc,'</a><b>12.한라어린이집</b><br>제주특별자치도 제주시 고마로13길 22-1 (일도이동)<br>가정, 정원수: 20</div>'), latlng: new daum.maps.LatLng(33.509406805,126.541789259), markerImage: new daum.maps.MarkerImage('http://t1.daumcdn.net/localimg/localimages/07/2018/pc/img/marker_spot.pngmark.png', imageSize, imageOption),title1:"한라어린이집"},
+{         content: '<div class="showlistbox"><a id=navi href=javascript:navi2("10.아이꿈별어린이집",33.515393248,126.579817378);>'.concat(Navi_Imgsrc,'</a><b>10.아이꿈별어린이집</b><br>제주특별자치도 제주시 건주로6길 15-3<br>민간, 정원수: 210</div>'), latlng: new daum.maps.LatLng(33.515393248,126.579817378), markerImage: new daum.maps.MarkerImage('mark.png', imageSize, imageOption),title1:"아이꿈별어린이집"},
+{         content: '<div class="showlistbox"><a id=navi href=javascript:navi2("11.CCTV",33.513228320,126.582713258);>'.concat(Navi_Imgsrc,'</a><b>11.CCTV</b><br>제주특별자치도 제주시 건주로7길 24-7 1층(도련일동)<br>가정, 정원수: 20</div>'), latlng: new daum.maps.LatLng(33.513228320,126.582713258), markerImage: new daum.maps.MarkerImage('http://ajubang.com/map/user/cctv.png', imageSize, imageOption),title1:"CCTV"},
+{         content: '<div class="showlistbox"><a id=navi href=javascript:navi2("12.한라어린이집",33.509406805,126.541789259);>'.concat(Navi_Imgsrc,'</a><b>12.한라어린이집</b><br>제주특별자치도 제주시 고마로13길 22-1 (일도이동)<br>가정, 정원수: 20</div>'), latlng: new daum.maps.LatLng(33.509406805,126.541789259), markerImage: new daum.maps.MarkerImage('mark.png', imageSize, imageOption),title1:"한라어린이집"},
 
 ];
 
-for (var i = 0; i < positions.length; i[PPLUS]) {
+for (var i = 0; i < positions.length; i++) {
     // 마커를 생성합니다
     var marker = new daum.maps.Marker({
         map: map, // 마커를 표시할 지도
@@ -618,5 +627,14 @@ var marker = new daum.maps.Marker({
 <div  style="cursor: pointer;" onClick="setCenter(33.509406805,126.541789259)" id=tchk12>12.한라어린이집</div>
 </div>
 
+<div id="mapw" class="bg_white" style="position:absolute;top:13;left:5;top:40;height:202px;width:502px;margin:3px 0 5px 10px;padding:5px;overflow-y:auto;background:rgba(255, 255, 255, 0.8);z-index: 19;font-size:12px;border-radius: 0px;border:1px solid #919191;border-radius:10px;">
+    <a href="https://ajubang.com/mm/" target="_new"><img src=/b2c/w_ad.gif.gif></a>
+</div>
 
-<script>setCenter(33.497246672,126.545214401)</script>
+<script>
+setTimeout(function(){
+    var elem = document.getElementById('mapw');
+    elem.style.display='none';
+
+    }, 12000); 
+</script>
