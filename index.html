@@ -880,7 +880,27 @@ for (var i = 0; i < positions.length; i ++) {
         position: positions[i].latlng, // 마커의 위치
         image:positions[i].markerImage
     });
+    // 마커 이미지를 생성합니다
+var markImage = new kakao.maps.MarkerImage(
+    'https://t1.daumcdn.net/localimg/localimages/07/2018/pc/roadview_minimap_wk_2018.png',
+    new kakao.maps.Size(26, 46),
+    {
+        // 스프라이트 이미지를 사용합니다.
+        // 스프라이트 이미지 전체의 크기를 지정하고
+        spriteSize: new kakao.maps.Size(1666, 168),
+        // 사용하고 싶은 영역의 좌상단 좌표를 입력합니다.
+        // background-position으로 지정하는 값이며 부호는 반대입니다.
+        spriteOrigin: new kakao.maps.Point(705, 114),
+        offset: new kakao.maps.Point(13, 46)
+    }
+);
 
+// 드래그가 가능한 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    image : markImage,
+    position: mapCenter,
+    draggable: true
+});
     // 마커에 표시할 인포윈도우를 생성합니다 
     var infowindow = new kakao.maps.InfoWindow({
         content: positions[i].content // 인포윈도우에 표시할 내용
@@ -907,27 +927,7 @@ function makeOutListener(infowindow) {
     };
 }
 
-    // 마커 이미지를 생성합니다
-var markImage = new kakao.maps.MarkerImage(
-    'https://t1.daumcdn.net/localimg/localimages/07/2018/pc/roadview_minimap_wk_2018.png',
-    new kakao.maps.Size(26, 46),
-    {
-        // 스프라이트 이미지를 사용합니다.
-        // 스프라이트 이미지 전체의 크기를 지정하고
-        spriteSize: new kakao.maps.Size(1666, 168),
-        // 사용하고 싶은 영역의 좌상단 좌표를 입력합니다.
-        // background-position으로 지정하는 값이며 부호는 반대입니다.
-        spriteOrigin: new kakao.maps.Point(705, 114),
-        offset: new kakao.maps.Point(13, 46)
-    }
-);
 
-// 드래그가 가능한 마커를 생성합니다
-var marker = new kakao.maps.Marker({
-    image : markImage,
-    position: mapCenter,
-    draggable: true
-});
     
 /* 아래와 같이도 할 수 있습니다 */
 /*
